@@ -1,3 +1,7 @@
+### INSTALACIÓN ###
+- Ir a chrome://extensions
+- click en "cargar extensión descomprimida"
+- Ir al directorio donde se descargó LichessAnnounce
 ### INSTALLATION ###
 
 - Navigate to chrome://extensions
