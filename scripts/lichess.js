@@ -50,6 +50,7 @@ var init = function (){
 
     window.console.log('started');
     observer.observe(target, config);
+};
 
 function announceMove () {
     if( moveLetters.length > 0 ){
@@ -63,6 +64,7 @@ function announceMove () {
         clearInterval(announceId);
     }
 }
+
 
 var observer = new MutationObserver(function( mutations ) {
     if ( enabled == false ) { return; }
