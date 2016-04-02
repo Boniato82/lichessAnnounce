@@ -53,7 +53,7 @@ var init = function (){
 
 function announceMove () {
     if( moveLetters.length > 0 ){
-        file = 'sonidos/' + sounds[moveLetters[0]]
+        file = 'sounds/es' + sounds[moveLetters[0]]
         console.log(file)
         var audio = new Audio(chrome.extension.getURL(file))
         audio.play()
