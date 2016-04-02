@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Lichess move announce",
-  "description": "This extension will announce moves on lichess",
+  "name": "Lichess move announce (Spanish version)",
+  "description": "Esta extensión anuncia movimientos hablando en la web de Lichess",
   "version": "0.1",
 "icons": {"48": "icon48.png" },
   "browser_action": {
