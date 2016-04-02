@@ -1,6 +1,5 @@
 var moveLetters = new Array();
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-var language = null;
 var enabled = null;
 var announceId = null;
 var sounds = new Array();
@@ -8,11 +7,6 @@ var sounds = new Array();
 chrome.storage.onChanged.addListener(function(changes, namespace) {
     for (key in changes) {
         var storageChange = changes[key];
-
-        if (key == 'language'){
-            language = storageChange.newValue
-        }
-
         if (key == 'enabled'){
             enabled = storageChange.newValue
         }
@@ -57,19 +51,9 @@ var init = function (){
     window.console.log('started');
     observer.observe(target, config);
 
-    chrome.storage.sync.get('language', function(items) {
-        language = items['language'];
-    });
-
-    if ( language == null ) {
-        language = 'en';
-    }
-};
-
-
 function announceMove () {
     if( moveLetters.length > 0 ){
-        file = 'sounds/' + language + '/' + sounds[moveLetters[0]]
+        file = 'sonidos/' + sounds[moveLetters[0]]
         console.log(file)
         var audio = new Audio(chrome.extension.getURL(file))
         audio.play()
